@@ -7,25 +7,22 @@ public class MyFirstProgram {
     hello("user");
     hello("Boris");
 
-    double l = 5;
-    System.out.println("Площа квадрата зі стороною " + l + " = " + area(l));
+    Square s = new Square(5); /*Щоб не писати double l = 5; ми в конструкторі пишемо параметри квадрата*/
+    System.out.println("Площа квадрата зі стороною " + s.l + " = " + area(s));
 
-    double a = 4;
-    double b = 6;
-    System.out.println("Площа прямокутника зі сторонами " + a + " і " + b + " = " + area(a, b));
+    Rectangle r = new Rectangle(4,6);/*Щоб не писати double a = 4 a double b = 6; ми в конструкторі пишемо параметри квадрата*/
+    System.out.println("Площа прямокутника зі сторонами " + r.a + " і " + r.b + " = " + area(r));
   }
 
   public static void hello(String somebody){
     System.out.println("Hello, " + somebody + "!");
   }
 
-  public static double area(double len) {
-    return len * len;
-    /*Для повернення результату потрібно написати return тип повертання результату вказується перед назвою
-     * функцію в нашому випадку  public static тип повернення результату  !!double!! тобто число (5.0...100.0)*/
+  public static double area(Square s) {
+    return s.l * s.l;
   }
 
-  public static double area(double a, double b) {
-    return a*b;
+  public static double area(Rectangle r){
+    return r.a * r.b;
   }
 }
