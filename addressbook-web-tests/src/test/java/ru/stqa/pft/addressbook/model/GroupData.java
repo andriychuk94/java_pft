@@ -1,5 +1,8 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.model;
 
+/**
+ * Created by Boris on 08.06.2017.
+ */
 public class GroupData {
   private final String name;
   private final String header;
