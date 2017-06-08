@@ -12,5 +12,9 @@ public class Square {
     public Square(double len) {
     l = len;} - Це називається Конструктор*/
   }
+
+  public double area() {
+    return 25;
+  }
 }
 
